@@ -23,8 +23,8 @@ export default function CatalogItem({ workout }) {
             </div>
             <footer className="align-center pad-med">
                 {isMyWorkout
-                    ? <span>My choise today: <div><strong>{workout.type.toUpperCase()}</strong></div></span>
-                    : <span>His choise today: <div><strong>{workout.type.toUpperCase()}</strong></div></span>
+                    ? <span>My choise today: <div><strong>{workout.type?.toUpperCase()}</strong></div></span>
+                    : <span>His choise today: <div><strong>{workout.type?.toUpperCase()}</strong></div></span>
                 }
                 {isMyWorkout 
                     ? <Link className="action" to={'/my-workout'}>

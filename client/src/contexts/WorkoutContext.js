@@ -31,6 +31,10 @@ export const WorkoutProvider = ({
     useEffect(() => {
         workoutService.getAll()
             .then(result => {
+                if (result === undefined) {
+                    return; 
+                }
+
                 const action = {
                     type: 'ADD_WORKOUTS',
                     payload: result
